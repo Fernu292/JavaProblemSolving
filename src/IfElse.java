@@ -2,15 +2,22 @@ import java.util.Scanner;
 
 public class IfElse {
     public static void ifElseStatment(){
-        int N;
-        Scanner sc =  new Scanner(System.in);
-        N = sc.nextInt();
+        try(Scanner sc = new Scanner(System.in)){
+            int N;
+            N = sc.nextInt();
 
-        if(N%2!=0){
-            System.out.println("Weird");
-        }else{
-            System.out.println("Not Weird");
+            if(N%2==0){
+                if(N>=6 && N<=20){
+                    System.out.println("Weird");
+                }else{
+                    System.out.println("Not Weird");
+                }
+            }else{
+                System.out.println("Weird");
+            }
+
         }
         
+
     }
 }
